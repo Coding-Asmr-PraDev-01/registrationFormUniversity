@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --body-bg: #f2f2f2;
+    --form-body-bg: #fcfcfd;
+    --form-btn-bg: #008ffd;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bg);
+}
+
+.formContainer{
+    background-color: var(--form-body-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.12);
+}
+
+.formContainer .textBx {
+    text-align: center;
+}
+
+.formContainer .textBx h2{
+    font-size: 2rem;
+}
+
+.formContainer .textBx p{
+    opacity: 0.6;
+}
+
+.fieldContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.fieldContainer > .fieldBx{
+    flex: 1;
+}
+
+.fieldContainer > .fieldBx h3{
+    font-size: 1.1rem;
+}
+
+.fieldContainer > .fieldBx input{
+    padding: 0.6rem 1rem ;
+    width: 100%;
+    margin-top: 0.6rem;
+    border-radius: 0.4rem;
+    outline: none;
+    border: 3px solid rgba(0, 0, 0, 0.12);
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.fieldContainer > .fieldBx input:focus{
+    border: 3px solid var(--form-btn-bg);
+}
+
+.fieldContainer > .fieldBx input::placeholder{
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-size: 1rem;
+}
+
+.fieldContainer > .fieldBx .inputBx{
+    display: flex;
+    align-items: center;
+}
+
+.fieldContainer > .fieldBx .inputBx i{
+    margin-left: -2rem;
+    margin-top: 0.7rem;
+    cursor: pointer;
+}
+
+.contentBx > div{
+    display: flex;
+    gap: 0.7rem;
+}
+
+.btn{
+    background-color: var(--form-btn-bg);
+    padding: 0.6rem 1rem;
+    text-align: center;
+    border-radius: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.link-text{
+    color: var(--form-btn-bg);
+    cursor: pointer;
+}
+
+.footer-text{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
