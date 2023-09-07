@@ -39,3 +39,30 @@ const validatePhoneNumber = (e) => {
 }
 
 phoneNumInput.addEventListener('input', validatePhoneNumber);
+
+const validatePhoneNumber = (e) => {
+    const phoneNumInput = e.target; // Get the input element
+    const phoneString = "0123456789";
+    const errorMsgsObj = {
+        phoneNumError: ["", ""] // Initialize with two empty strings
+    };
+
+    if (phoneNumInput.value.length !== 10) {
+        errorMsgsObj.phoneNumError[0] = "Please enter a phone number with exactly ten numerals!!!";
+    } else {
+        errorMsgsObj.phoneNumError[0] = "";
+    }
+
+    if (phoneNumInput.value !== undefined && !/^[0-9]+$/.test(phoneNumInput.value)) {
+        errorMsgsObj.phoneNumError[1] = "Phone number must be numeric only";
+    } else {
+        errorMsgsObj.phoneNumError[1] = "";
+    }
+
+    console.log(errorMsgsObj);
+}
+
+// Assuming you have an input element with id 'phoneNumInput'
+const phoneNumInput = document.getElementById('phoneNumInput');
+phoneNumInput.addEventListener('input', validatePhoneNumber);
+
