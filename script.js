@@ -21,3 +21,21 @@ showPasswdBtn.forEach((btn) => {
         isVisible = !isVisible;
     });
 })
+
+const validatePhoneNumber = (e) => {
+    let phoneString = "0123456789";
+    
+    if(phoneNumInput.value.length <= 10){
+        errorMsgsObj.phoneNumError[0] = "Please enter phone number of valid length i.e of ten numerals!!!";
+    }else{
+        errorMsgsObj.phoneNumError[0] = "";
+    }
+    if(phoneNumInput.value !== undefined && !phoneNumInput.value[phoneNumInput.value.length - 1].includes(phoneString)){
+        errorMsgsObj.phoneNumError[1] = "Phone number must be numeric only";
+    }else{
+        errorMsgsObj.phoneNumError[1] = "";
+    }
+    console.log(errorMsgsObj)
+}
+
+phoneNumInput.addEventListener('input', validatePhoneNumber);
