@@ -78,6 +78,20 @@ const validatePassword = () => {
 
 }
 
+let errorMsgsObj = {
+    phoneNumErrors: {
+        phoneLenError: "Please enter phone number of valid length i.e of ten numerals!!!",
+        phoneNumericError: "Phone number must be numeric only"
+    },
+    passwdErros: {
+        mismatchError: "Password does not match with confirm password",
+        alphabetError: "Password must atleast contain one alphabet",
+        passwdLenError: "Password length must be atleast 8 characters long",
+        specialCharError: "Password must contain atleast one special character",
+        upperCaseAlphabetError: "Password must contain atlease one uppercase alphabet"
+    }
+}
+
 // Assuming you have an input element with id 'phoneNumInput'
 const phoneNumInput = document.getElementById('phoneNumInput');
 phoneNumInput.addEventListener('input', validatePhoneNumber);
