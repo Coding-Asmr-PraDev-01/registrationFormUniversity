@@ -96,3 +96,23 @@ let errorMsgsObj = {
 const phoneNumInput = document.getElementById('phoneNumInput');
 phoneNumInput.addEventListener('input', validatePhoneNumber);
 
+            const showErrorMsg = (errMsg) => {
+    errorMsgs.forEach(msg => {
+        let msgText = msg.parentElement.firstElementChild.textContent;
+        // console.log(msgText);
+
+        if(msgText == "Phone Number*"){
+            msg.textContent = errMsg;
+            console.log("no way")
+            // console.log(msgText)
+            console.log(msg)
+        }
+        if(msgText.trim() == "Password*"){
+            console.log("hi there")
+            msg.textContent = errMsg;
+            console.log(msg);
+            // console.log(msgText);
+        }
+    });
+}
+
