@@ -1,0 +1,26 @@
+        <div class="fieldContainer">
+            <div class="fieldBx">
+                <h3>Phone Number*</h3>
+                <input class="phone_number" type="text" placeholder="Phone number" />
+                <span class="error-msg"></span>
+            </div>
+        </div>
+
+        <div class="fieldContainer">
+            <div class="fieldBx">
+                <h3>Password*</h3>
+                <div class="inputBx">
+                    <input id="password" type="password" placeholder="Enter password" />
+                    <i class="show-passwd-btn fa-solid fa-eye-slash"></i>
+                </div>
+            </div>
+            <div class="fieldBx">
+                <h3>Confirm Password*</h3>
+                <div class="inputBx">
+                    <input id="confirm-password" type="password" placeholder="Confirm password" />
+                    <i class="show-passwd-btn fa-solid fa-eye-slash"></i>  
+                </div>
+            <span class="error-msg"></span>
+
+            </div>
+        </div>
