@@ -24,18 +24,23 @@ showPasswdBtn.forEach((btn) => {
 
 const validatePhoneNumber = (e) => {
     let phoneString = "0123456789";
+    let errorMsg = "";
     
     if(phoneNumInput.value.length <= 10){
-        errorMsgsObj.phoneNumError[0] = "Please enter phone number of valid length i.e of ten numerals!!!";
+        errorMsg = errorMsgsObj.phoneNumErrors.phoneLenError;
+        showErrorMsg(errorMsg);
+        isPasswd = false;
+    }else if(phoneNumInput.value !== undefined && 
+        !phoneString.includes(phoneNumInput.value[phoneNumInput.value.length - 1]) && !isPasswd){
+        errorMsg = errorMsgsObj.phoneNumErrors.phoneNumericError;
+        showErrorMsg(errorMsg);
+        isPasswd = false;
     }else{
-        errorMsgsObj.phoneNumError[0] = "";
+        showErrorMsg("");
+        isPasswd = true;
     }
-    if(phoneNumInput.value !== undefined && !phoneNumInput.value[phoneNumInput.value.length - 1].includes(phoneString)){
-        errorMsgsObj.phoneNumError[1] = "Phone number must be numeric only";
-    }else{
-        errorMsgsObj.phoneNumError[1] = "";
-    }
-    console.log(errorMsgsObj)
+
+    console.log(isPasswd)
 }
 
 phoneNumInput.addEventListener('input', validatePhoneNumber);
@@ -60,6 +65,17 @@ const validatePhoneNumber = (e) => {
     }
 
     console.log(errorMsgsObj);
+}
+
+const validatePassword = () => {
+    let alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let errorMsg = "";
+    if(passwd.value !== ConfirmPasswd.value){
+        errorMsg = errorMsgsObj.passwdErros.mismatchError;
+        
+        if(alphabets.substring(passwd.value) )
+    }
+
 }
 
 // Assuming you have an input element with id 'phoneNumInput'
